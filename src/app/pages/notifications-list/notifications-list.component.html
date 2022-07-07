@@ -1,0 +1,40 @@
+<div class="slider-area">
+  <app-other-menu></app-other-menu>
+  <div class="banner-area all-text-white text-center" style="padding-top: 120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-title">التنبيهات</h1>
+                <ul class="fund-breadcumb">
+                    <li><a routerLink="/home">الرئيسية</a> </li>
+                    <li><a routerLink="/notification">التنبيهات</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="main-content section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">  
+              <div class="table-responsive">
+                <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">العنوان</th>
+                    <th scope="col">التنبيه</th>
+                    <th scope="col">التاريخ</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of notifications">
+                    <td>{{item.title}}</td>
+                    <td>{{item.msg}}</td>
+                    <td>{{item.dt_date | date:"dd-MM-yyyy"}}</td>
+                  </tr>
+                </tbody>
+                </table>
+               </div>
+            </div>
+        </div>
+ </div>

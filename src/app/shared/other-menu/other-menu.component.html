@@ -1,0 +1,40 @@
+<div class="main-menu-area main-menu-area--absolute" style="max-width: 100%; overflow-x: hidden;">
+  <div class="container">
+      <div class="menu-logo">
+          <div class="logo">
+              <a routerLink="/home" class="logo-index"><img src="./../../../assets/images/logo.png" alt="" style="width: 85px;" /></a>
+          </div>
+          <nav id="easy-menu">
+              <ul class="menu-list">
+                  <li><a routerLink="/home">الرئيسية</a></li>
+                  <li *ngIf="usertype == ''" ><a routerLink="/register-donator">تسجيل متبرع</a></li>
+                  <li *ngIf="usertype == ''" ><a routerLink="/register-user">تسجيل مستفيد</a></li>
+                  <li><a routerLink="/news/news">أخبار العائلة</a></li>
+                  <li><a routerLink="/news/othe">المناسبات</a></li>
+                  <li><a routerLink="/page/about">من نحن</a></li>
+                  <li><a routerLink="/contact-us">تواصل معنا</a></li>
+                  <li *ngIf="usertype == 'user' " ><a routerLink="/profile-user"> تعديل معلوماتي </a></li>
+                  <li *ngIf="usertype == 'admin' "><a routerLink="/profile-donator"> تعديل معلوماتي </a></li>
+                  <li *ngIf="usertype == 'admin' "><a routerLink="/donate"> أرشيف التبرعات </a></li>
+                  <li *ngIf="usertype == 'user'"><a routerLink="/request"> طلبات التبرعات </a></li>         
+                  <li *ngIf="usertype != ''" ><a routerLink="/notification">التنبيهات</a></li>
+                  <li *ngIf="usertype != ''" ><a style="cursor: pointer;" (click)="logout()"> تسجيل الخروج </a></li>
+                  <a class="hidden" href="/" #btnRefresh></a>
+                  <!-- <li *ngIf="isLoggedIn">
+                    <a href="#">
+                        ملفي الشخصي
+                      <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown" style="background-color:#f3eeee4d;">
+            
+                    </ul>
+                </li> -->
+          </ul>
+      </nav>
+      <div class="donate-button-wrap">
+        <a *ngIf="!isLoggedIn" routerLink="/login" class="btn base-bg hidden-xs hidden-sm">تسجيل الدخول</a>
+        <a (click)="mobileMenu()" class="hidden-lg hidden-md" id="humbarger-icon"><i class="fa fa-bars"></i> </a>
+      </div>
+      </div>
+  </div>
+</div>

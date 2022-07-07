@@ -1,0 +1,282 @@
+<div class="slider-area">
+  <!-- other menu -->
+  <app-other-menu></app-other-menu>
+  <div class="join-us-section all-text-white" style="padding-top: 90px;" *ngIf="!isLoggedIn">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="join-us wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".3s">
+                    <div class="join-us__text-content">
+                        <h4 class="join-us__title">هل تود المساهمة بمبلغ بسيط؟ هل تريد الاستفادة من خدمات</h4>
+                        <p>يمكنك المساعدة في استقطاع مبلغ بسيط او الزكاة من خلال التسجيل كمتبرع أو التسجيل كمستفيد من خدمات صندوق الغشيان</p>
+                    </div>
+                    <div class="pdb30 pdt10">
+                        <a routerLink="/register-donator" class="btn">تسجيل متبرع</a>
+                    </div>
+                    <div class="pdb30 pdt10">
+                        <a routerLink="/register-user" class="btn">تسجيل مستفيد</a>
+                    </div>
+                    <div class="pdb30 pdt10">
+                        <a routerLink="/service" class="btn">عرض الخدمات</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- <div data-scroll-index="0" id="rev_slider_1052_1_wrapper" class="all-text-white rev_slider_wrapper fullscreen-container" data-alias="web-product-dark122" data-source="gallery"> -->
+    <div id="rev_slider_1052_1" class="rev_slider fullscreenbanner">
+        <img style="width: 100%;" src="../../../assets/images/slider/1.jpg" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+
+        <!-- <ul>
+          <li data-index="rs-2946" data-transition="fade" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" >
+              <img src="../src/assets/images/slider/1.jpg" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+              <div class="tp-caption tp-resizeme"
+                  id="slide-2946-layer-7"
+                  data-x="['middle','middle','middle','middle']"
+                  data-hoffset="['237','217',0,'0']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-voffset="['60','60','60','60']"
+                  data-fontsize="['48','48','48','30']"
+                  data-lineheight="['60','60','50','30']"
+                  data-width="['710','710','none','none']"
+                  data-height="none"
+                  data-whitespace="wrap"
+                  data-type="text"
+                  data-responsive_offset="on"
+                  data-frames='[{"from":"x:50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+                  data-textAlign="['right','right','center','center']"
+                  data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]"
+                  data-paddingbottom="[0,0,0,0]"
+                  data-paddingleft="[0,0,0,0]">
+              <span class="slider-title"> عائلة الغشيان <br/>يدا واحدة لمستقبل أفضل</span>
+              </div> 
+
+               <div class="tp-caption  tp-resizeme slider-button"
+                  id="slide-2946-layer-8"
+                  data-x="['middle','middle','middle','middle']"
+                  data-hoffset="['237','147',0,'0']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-voffset="['180','225','115','115']"
+                  data-width="['710','710','none','none']"
+                  data-height="['48','48','48','48']"
+                  data-whitespace="nowrap"
+                  data-type="text"
+                  data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-2947","delay":""}]'
+                  data-responsive_offset="on"
+                  data-responsive="off"
+                  data-frames='[{"from":"x:50px;opacity:0;","speed":1000,"to":"o:1;","delay":1750,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'
+                  data-textAlign="['right','right','center','center']"
+                  data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]"
+                  data-paddingbottom="[0,0,0,0]"
+                  data-paddingleft="[0,0,0,0]" >
+                  <a href="#" class="btn">تبرع الأن</a>
+              </div> 
+          </li>
+          <li data-index="rs-2947" data-transition="fade" data-slotamount="1" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="1500"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" >
+              <img src="../src/assets/images/slider/2.jpg" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+          <div class="tp-caption tp-resizeme"
+                      id="slide-2947-layer-7"
+                  data-x="['middle','middle','middle','middle']"
+                  data-hoffset="['237','217',0,'0']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-voffset="['60','60','60','60']"
+                  data-fontsize="['48','48','48','30']"
+                  data-lineheight="['60','60','50','30']"
+                  data-width="['710','710','none','none']"
+                  data-height="none"
+                  data-whitespace="wrap"
+                  data-type="text"
+                  data-responsive_offset="on"
+                  data-frames='[{"from":"x:50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
+                  data-textAlign="['right','right','center','center']"
+                  data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]"
+                  data-paddingbottom="[0,0,0,0]"
+                  data-paddingleft="[0,0,0,0]">
+                  <span class="slider-title">بالتعاون والتشارك<br/> يمكننا الحصول على ما <br/>نتطلع اليه</span></div>
+              
+              <div class="tp-caption tp-resizeme slider-button"
+                  id="slide-2947-layer-8"
+                  data-x="['middle','middle','middle','middle']"
+                  data-hoffset="['237','147',0,'0']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-voffset="['200','125','115','115']"
+                  data-width="['710','710','none','none']"
+                  data-height="['48','48','48','48']"
+                  data-whitespace="nowrap"
+                  data-type="text"
+                  data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-2947","delay":""}]'
+                  data-responsive_offset="on"
+                  data-responsive="off"
+                  data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1750,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'
+                  data-textAlign="['right','right','center','center']"
+                  data-paddingtop="[0,0,0,0]"
+                  data-paddingright="[0,0,0,0]"
+                  data-paddingbottom="[0,0,0,0]"
+                  data-paddingleft="[0,0,0,0]" >
+                  <a href="#" class="btn"> التبرع الان</a>
+              </div> 
+          </li>
+      </ul> -->
+      <!-- <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div> -->
+    </div>
+  <!-- </div> -->
+</div>
+<div class="body-overlay"></div>
+<!-- <section class="section-padding feature-section">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="section-heading text-center">
+                  <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">أهلا <span class="base-color">بكم</span> </h2>
+                  <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">يمكنكم طلب المساعدة لأحد الخدمات التالية</span>
+                  <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
+              </div>
+          </div>
+      </div>
+      <div class="row row-eq-rs-height">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="feature-item wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".2s">
+                  <div class="feature-item__icon-wrap">
+                      <i class="feature-item__icon fa fa-life-ring"></i>
+                  </div>
+                  <h4 class="feature-item__title heading-label-four"><a href="#">الزواج</a></h4>
+                  <p>لطلب مساعدة في تكاليف الزواج والمهور</p>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="feature-item wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".4s">
+                  <div class="feature-item__icon-wrap">
+                      <i class="feature-item__icon fa fa-home"></i>
+                  </div>
+                  <h4 class="feature-item__title heading-label-four"><a href="#">ايجار منزل</a></h4>
+                  <p>المساعدة في الحصول على دفعات لايجار منزل</p>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="feature-item wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".6s">
+                  <div class="feature-item__icon-wrap">
+                      <i class="feature-item__icon fa fa-dollar"></i>
+                  </div>
+                  <h4 class="feature-item__title heading-label-four"><a href="#">دفع دين</a></h4>
+                  <p>المساهمة في دفع دين او تراكمات مالية عليكم </p>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="feature-item wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".2s">
+                  <div class="feature-item__icon-wrap">
+                      <i class="feature-item__icon fa fa-shopping-basket"></i>
+                  </div>
+                  <h4 class="feature-item__title heading-label-four"><a href="#">مصاريف</a></h4>
+                  <p>المساعدة في دفع مصاريف شهرية مثل: مصاريف علاجية او مصاريف دراسة او مصاريف معيشية</p>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="feature-item wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".4s">
+                  <div class="feature-item__icon-wrap">
+                      <i class="feature-item__icon fa fa-money"></i>
+                  </div>
+                  <h4 class="feature-item__title heading-label-four"><a href="#">شراء جديد </a></h4>
+                  <p>المساهمة في شراء سيارة جديدة او أجهزة كهربائية</p>
+              </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="feature-item wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".6s">
+                  <div class="feature-item__icon-wrap">
+                      <i class="feature-item__icon fa fa-info"></i>
+                  </div>
+                  <h4 class="feature-item__title heading-label-four"><a href="#">أخرى</a></h4>
+                  <p>المساعدة في الحصول على مبلغ مالي لأجل امور اخرى يمكنك ذكرها لاحقا </p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section> -->
+<section class="help-us-section section-padding all-text-white">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="section-heading text-center">
+                  <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">كيف يمكنني ان أحصل <span class="base-color">على تبرع</span> </h2>
+                  <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">يمكنك التسجيل في صندوق العائلة الالكتروني والحصول على خدمتك في خطوات بسيطة</span>
+                  <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-4 col-xs-12">
+              <div class="help-us wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".2s">
+                  <div class="help-us__icon-wrap">
+                      <i class="help-us__icon fa fa-user-plus"></i>
+                  </div>
+                  <div class="help-us__text-content">
+                      <h4 class="help-us__title heading-label-four">تسجيل كمستفيد</h4>
+                      <p>تسجيلك كمستفيد في الموقع مع تعبئة النموذج الخاص بك</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 col-xs-12">
+              <div class="help-us wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".4s">
+                  <div class="help-us__icon-wrap">
+                      <i class="help-us__icon fa fa-search"></i>
+                  </div>
+                  <div class="help-us__text-content">
+                      <h4 class="help-us__title heading-label-four">مراجعة وتدقيق البيانات</h4>
+                      <p>تقوم اللجنة بمراجعة طلبك وتقييمه</p>
+                     
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4 col-xs-12">
+              <div class="help-us wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".6s">
+                  <div class="help-us__icon-wrap">
+                      <i class="help-us__icon fa fa-check"></i>
+                  </div>
+                  <div class="help-us__text-content">
+                      <h4 class="help-us__title heading-label-four">الموافقة على الطلب</h4>
+                      <p>بعد الموافقة على الطلب يمكنك استقبال المبالغ المطلوبة بشكل شهري او لمرة واحدة حسب الحاجة</p>
+                    
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="blog-section section-padding ash-white-bg">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="section-heading text-center">
+                  <h2 class="section-title wow fadeInUpXsd" data-wow-duration=".7s" data-wow-delay=".1s">أخبار <span class="base-color">العائلة</span></h2>
+                  <span class="section-sub-title wow fadeInUpXsd disinb" data-wow-duration=".9s" data-wow-delay=".1s">اطلع على اخر اخبار عائلة الغشيان</span>
+                  <div class="section-heading-separator wow fadeInUpXsd" data-wow-duration="1.1s" data-wow-delay=".1s"></div>
+              </div>
+          </div>
+      </div>
+      <div class="row row-eq-rs-height">
+          <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let item of news">
+              <div class="blog-post wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".2s">
+                  <div class="blog-post__thumbnail-wrap" style="height: 200px;">
+                      <img src="{{item?.image}}" alt="blog">
+                      <div class="blog-post__like-comment">
+                          <span>{{item?.title}}</span>
+                      </div>
+                  </div>
+                  <div class="blog-post__text-content" >
+                      <div class="blog-post__meta-info">
+                          <span class="small-text"><i class="fa fa-user base-color"></i>الادارة</span>
+                          <span class="small-text"><i class="fa fa-calendar base-color"></i>{{item?.createAt | date:'dd-MM-yyyy'}}</span>
+                      </div>
+                      <p style="height: 55px;overflow: hidden;">
+                          {{item?.details}}
+                      </p>
+                      <a routerLink="/news-details/{{item?._id}}" class="btn">اقرأء المزيد</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

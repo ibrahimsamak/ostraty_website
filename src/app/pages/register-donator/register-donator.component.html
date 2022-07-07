@@ -1,0 +1,128 @@
+<div class="slider-area">
+  <app-other-menu></app-other-menu> 
+  <div class="banner-area all-text-white text-center" style="padding-top: 120px;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <h1 class="page-title">تسجيل متبرع</h1>
+              <ul class="fund-breadcumb">
+                  <li><a routerLink="/home">الرئيسية</a> </li>
+                  <li><a routerLink="register-donator">تسجيل متبرع</a> </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </div>
+  <div class="main-content section-padding">
+    <div class="container">
+        <h4 class="donate-page-title text-uppercase">المعلومات العامة</h4>
+        <form #form="ngForm" class="contact-form">
+            <div class="row pdb20">
+                <div class="col-md-2 pdt25">
+                    <span>الاسم كاملا <span class="red-color">*</span> </span>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group mt15 input-group--border-radius">
+                        <input required id="full_name" name="full_name" #full_name="ngModel" [(ngModel)]="userDetails.full_name" type="text" placeholder="" class="form-control input-group__input"/>
+                    </div>
+                </div>
+                <div class="col-md-2 pdt25">
+                  <span>البريد الالكتروني <span class="red-color">*</span> </span>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group mt15 input-group--border-radius">
+                      <input required id="email" name="email" #email="ngModel" [(ngModel)]="userDetails.email" pattern="^[a-zA-Z]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" type="text" placeholder="" class="form-control input-group__input"/>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row pdb20">
+              <div class="col-md-2 pdt25">
+                  <span>كلمة المرور  <span class="red-color">*</span> </span>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group mt15 input-group--border-radius">
+                      <input required id="password" name="password" #password="ngModel" [(ngModel)]="userDetails.password" type="password" placeholder="" class="form-control input-group__input"/>
+                  </div>
+              </div>
+              <div class="col-md-2 pdt25">
+                <span>رقم الجوال  <span class="red-color">*</span> </span>
+              </div>
+              <div class="col-md-4">
+                <div class="input-group mt15 input-group--border-radius">
+                    <input required id="phone_number" name="phone_number" #phone_number="ngModel" [(ngModel)]="userDetails.phone_number" type="text" placeholder="" class="form-control input-group__input"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="row pdb20">
+              <div class="col-md-2 pdt25">
+                  <span>رقم الهوية <span class="red-color">*</span> </span>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group mt15 input-group--border-radius">
+                      <input required id="Id_no" name="Id_no" #Id_no="ngModel" [(ngModel)]="userDetails.Id_no" type="text" placeholder="" class="form-control input-group__input"/>
+                  </div>
+              </div>
+              <div class="col-md-2 pdt25">
+                <span>مدة التبرع <span class="red-color">*</span> </span>
+              </div>
+              <div class="col-md-4">
+                <div class="row pdt25">
+                  <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let item of donate_type">
+                      <div class="input-group__radio-wrap"> 
+                          <input type="radio" id="paymentMethod_type" name="paymentMethod_type" #paymentMethod_type="ngModel" [value]="item" [(ngModel)]="userDetails.paymentMethod_type">
+                          <label for="payment-method-online">{{item}}</label>
+                      </div>
+                  </div>
+              </div>
+              </div>
+            </div>    
+
+            <div class="row pdb20">
+                <div class="col-md-2 pdb25">
+                    <span>التبرع لنوع</span>
+                </div>
+                <div class="col-md-4" style="padding-top:18px">
+                  <div class="input-group">
+                        <select id="paymentMethod_id" name="paymentMethod_id" #paymentMethod_id="ngModel" [(ngModel)]="userDetails.paymentMethod_id" 
+                        class="form-control input-group__select">
+                            <option *ngFor="let item of services" value="{{item._id}}">{{item.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-2 pdt25">
+                  <span>مبلغ التبرع <span class="red-color">*</span> </span>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group mt15 input-group--border-radius">
+                      <input required id="ammount" name="ammount" #ammount="ngModel" [(ngModel)]="userDetails.ammount" type="number" placeholder="" class="form-control input-group__input"/>
+                  </div>
+              </div>
+
+            </div>
+            
+            <div class="row pdb20">
+                <div class="col-md-2 pdb10">
+                    <span>ملاحظات </span>
+                </div>
+                <div class="col-md-10">
+                    <div class="input-group">
+                        <textarea id="notes" name="notes" #notes="ngModel" [(ngModel)]="userDetails.notes" class="form-control input-group__textarea" placeholder=""></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <a target="blank" *ngIf="file_url != '' " href="{{file_url}}" #btnFile></a>
+                        <input [disabled]="form.invalid" (click)="SendAction();" class="btn" value="حفظ وارسال الطلب">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>

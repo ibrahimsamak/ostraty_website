@@ -1,0 +1,73 @@
+<div class="color-shicher-wraper">
+  <div class="swhicher-button">
+      <button data-att="color-yellow" type="button" class="yellow-bg"></button>
+      <button data-att="color-green" type="button" class="green-bg"></button>
+      <button data-att="color-cyan" type="button" class="cyan-bg"></button>
+      <button data-att="color-red" type="button" class="red-bg"></button><br/>
+      <button data-att="color-purple" type="button" class="purple-bg"></button>
+      <button data-att="color-pink" type="button" class="pink-bg"></button>
+      <button data-att="color-gradient" type="button" class="gradient-bg"></button><br/><br/>
+      <div class="tobar-fixed-check">
+          <input type="checkbox" id="topbar-fixed"/><label for="topbar-fixed">أهلا وسهلا بكم</label>
+      </div>
+      <div class="backtop-top-check">
+          <input type="checkbox" id="backtotop-fixed"/><label for="backtotop-fixed"> العودة</label>
+      </div>
+      <div class="removetopbar">
+          <input type="checkbox" id="topbar-checked"/><label for="topbar-checked"> اظهار أو اخفاء </label>
+      </div><br/>
+      <!-- <a href="https://themeforest.net/item/the-fund-charity-crowdfunding-html5-template/21603096?s_rank=1" class="btn">Purchase</a> -->
+  </div>
+
+</div>
+<header class="fund-header">
+  <div class="top-bar base-bg">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-xs-6 text-xs-center">
+                  <div class="top-bar__contact">
+                      <i class="fa fa-envelope"></i> <span class="pdl5">
+                        <a href="mailto:algoshayannasser@gmail.com"> algoshayannasser@gmail.com</a>
+                      </span>
+                      <span class="pdl15 pdr15">|</span>
+                      <i class="fa fa-phone-square"></i> <span class="pdl5">00966553888444</span>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-xs-6 text-right text-xs-center">
+                  <!-- <div class="social-icons ">
+                      <ul class="list-inline pdl20">
+                          <li><a href="#"><i class="fa fa-facebook"></i> </a> </li>
+                          <li><a href="#"><i class="fa fa-twitter"></i> </a> </li>
+                          <li><a href="#"><i class="fa fa-youtube"></i> </a> </li>
+                          <li><a href="#"><i class="fa fa-instagram"></i> </a> </li>
+                      </ul>
+                  </div> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+<nav class="mobile-background-nav">
+  <div class="mobile-inner">
+      <span class="mobile-menu-close"><i class="icon-icomooon-close"></i></span>
+      <ul class="menu-accordion">
+          <li><a routerLink="/home" class="has-submenu">الرئيسية</a></li>
+          <li><a routerLink="/register-donator">تسجيل متبرع</a></li>
+          <li><a routerLink="/register-user">تسجيل مستفيد</a></li>
+          <li><a routerLink="/news/news">أخبار العائلة</a></li>
+          <li><a routerLink="/news/othe">المناسبات</a></li>
+          <li><a routerLink="/page/about">من نحن</a></li>
+          <li><a routerLink="/contact-us">تواصل معنا</a></li>
+          <li *ngIf="!isLoggedIn"><a routerLink="/login">تسجيل الدخول</a></li>
+          <li *ngIf="isLoggedIn && usertype == 'user' " ><a routerLink="/profile-user"> تعديل معلوماتي </a></li>
+          <li *ngIf="isLoggedIn && usertype == 'admin' "><a routerLink="/profile-donator"> تعديل معلوماتي </a></li>  
+          <li *ngIf="isLoggedIn && usertype == 'admin' "><a routerLink="/donate"> أرشيف التبرعات </a></li>
+          <li *ngIf="isLoggedIn && usertype == 'user'"><a routerLink="/requestt"> طلبات التبرعات </a></li>
+          <li *ngIf="isLoggedIn"><a routerLink="/notification">التنبيهات</a></li>
+          <li *ngIf="isLoggedIn"><a (click)="logout()"> تسجيل الخروج </a></li>
+          <a class="hidden" href="/" #btnRefresh></a>
+
+        <!-- <a  href=""></a> -->
+      </ul>
+  </div>
+</nav>

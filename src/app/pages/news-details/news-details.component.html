@@ -1,0 +1,42 @@
+<div class="slider-area">
+
+<app-other-menu></app-other-menu>
+
+<div class="banner-area all-text-white text-center" style="padding-top: 120px;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <h1 class="page-title">{{obj?.title}}</h1>
+              <ul class="fund-breadcumb">
+                  <li><a routerLink="/home">الرئيسية</a> </li>
+                  <li><a routerLink="/news">الأخبار</a> </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="main-content section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="blog-details">
+                  <div class="blog-details-top mb40">
+                      <div class="blog-details-image mb10">
+                          <img src="{{obj?.image}}" alt="blog details" style="width: 100%;">
+                      </div>
+                      <div class="blog-details-top__text-content">
+                          <h3 class="blog-details__title">{{obj?.title}}</h3>
+                          <p>
+                            {{obj?.details}}
+                          </p>
+                          <div class="blog-details__meta">
+                              <div class="blog-details__meta-item base-color"><i class="fa fa-calendar pdr5"></i>{{obj?.createAt | date:'dd/MM/yyyy'}}</div>
+                              <div class="blog-details__meta-item"><i class="fa fa-user pdr5"></i>الادارة</div>
+                          </div>
+                      </div>
+                  </div>                    
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

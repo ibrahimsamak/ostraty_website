@@ -1,0 +1,50 @@
+<div class="slider-area">
+  <app-other-menu></app-other-menu>
+  <div class="banner-area all-text-white text-center" style="padding-top: 120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-title">أرشيف التبرعات</h1>
+                <ul class="fund-breadcumb">
+                    <li><a routerLink="/home">الرئيسية</a> </li>
+                    <li><a routerLink="/donate">أرشيف التبرعات المعتمد من الادارة</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="main-content section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">  
+              <strong>مجموع التبرعات المعتمدة من الادارة: {{totals}} ر.س</strong>
+              <div class="table-responsive">
+                <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">المتبرع</th>
+                    <th scope="col">تبرع لأجل</th>
+                    <th scope="col">التاريخ</th>
+                    <th scope="col">الملبغ</th>
+                    <th scope="col">الاجراءات</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of donates">
+                    <td>{{item?.from_user?.full_name}}</td>
+                    <td>{{item?.methodType?.name}}</td>
+                    <td>{{item.createAt | date:"dd-MM-yyyy"}}</td>
+                    <td>
+                      <strong>{{item.ammount}} ر.س</strong>
+                    </td>
+                    <td>
+                      <button *ngIf="item.status != 0" class="btn btn-primary" (click)="approve(item._id);">تأكيد ايداع المبلغ</button>
+                    </td>
+                  </tr>
+                </tbody>
+                </table>
+               </div>
+            </div>
+        </div>
+ </div>

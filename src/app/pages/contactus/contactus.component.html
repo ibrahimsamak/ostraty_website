@@ -1,0 +1,66 @@
+<div class="slider-area">
+
+<app-other-menu></app-other-menu>
+
+<section class="section-padding" style="padding-top: 120px;"> 
+  <div class="col-md-12">
+      <div class="section-heading text-center">
+          <h2 class="section-title">تواصل <span class="base-color">معنا</span> </h2>
+          <div class="section-heading-separator"></div>
+      </div>
+  </div>
+  <div class="container no-padding">
+      <div class="main-contact">
+        <form #form="ngForm" class="contact-form">
+              <div class="row">
+                  <div class="col-sm-6">
+                      <div class="input-group">
+                          <input required type="text" id="name" name="name"  #name="ngModel" [(ngModel)]="contact.name" placeholder="الاسم" class="input-group__input form-control" />
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                      <div class="input-group">
+                          <input required type="email" 
+                          pattern="^[a-zA-Z]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+                          id="email" name="email"  #email="ngModel" [(ngModel)]="contact.email" placeholder="البريد الالكتروني" class="input-group__input form-control" />
+                      </div>
+                  </div>
+              </div>
+              <div class="input-group">
+                  <input required type="text"  id="title" name="title"  #title="ngModel" [(ngModel)]="contact.title"  placeholder="عنوان الرسالة" class="input-group__input form-control" />
+              </div>
+              <div class="input-group">
+                  <textarea required  id="message" name="message"  #message="ngModel" [(ngModel)]="contact.message"  class="input-group__textarea form-control" placeholder="الرسالة" rows="8" cols="80"></textarea>
+              </div>
+              <button [disabled]="form.invalid" class="btn base-bg" (click)="SendAction();">ارسال الان</button>
+              <br>
+              <span *ngIf="form.invalid" class="text-mute pdl15">* جميع الحقول مطلوبة بالشكل الصحيح </span>
+          </form>
+          <div class="contact-address">
+              <div class="contact-address-item">
+                  <span class="icon-wrap"><i class="fa fa-phone contact-icon"></i></span>
+                  <div class="text-content">
+                      <div class="base-color contact-title">رقم التواصل</div>
+                      00966553888444
+                  </div>
+              </div><!--/.contact-address-item-->
+              <div class="contact-address-item">
+                  <span class="icon-wrap"><i class="fa fa-envelope contact-icon"></i></span>
+                  <div class="text-content">
+                      <div class="base-color contact-title">البريد الالكتروني</div>   
+                      <a href="mailto:algoshayannasser@gmail.com"> algoshayannasser@gmail.com</a>
+                  </div>
+              </div><!--/.contact-address-item-->
+
+              <div class="contact-address-item">
+                  <span class="icon-wrap"><i class="fa fa-map-marker contact-icon"></i></span>
+                  <div class="text-content">
+                      <div class="base-color contact-title">الموقع الالكتروني</div>
+                      www.algoshayan.com
+                  </div>
+              </div><!--/.contact-address-item-->
+          </div>
+      </div>
+  </div>
+</section>
+</div>

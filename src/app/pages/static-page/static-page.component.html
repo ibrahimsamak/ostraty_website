@@ -1,0 +1,38 @@
+<div class="slider-area">
+
+    <app-other-menu></app-other-menu>
+            
+<div class="banner-area all-text-white text-center" style="padding-top: 120px;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <h1 class="page-title">{{obj?.title}}</h1>
+              <ul class="fund-breadcumb">
+                  <li><a routerLink="/home">الرئيسية</a> </li>
+                  <li><span>{{obj?.title}}</span></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="main-content section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="blog-details">
+                  <div class="blog-details-top mb40">
+                      <div class="blog-details-top__text-content">
+                          <h3 class="blog-details__title">{{obj?.title}}</h3>
+                          <p innerHTML="{{obj?.content}}"></p>
+                          <p>
+                              <img style="width: 100%;" height="50%" src="../../../assets/images/cert.png">
+                          </p>
+                      </div>
+                  </div>                    
+              </div>
+          </div>
+         
+      </div>
+  </div>
+</div>
+</div>

@@ -23,9 +23,36 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "src/assets/css/font-awesome.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/select2.min.css",
+              "src/assets/css/settings.css",
+              "src/assets/css/layers.css",
+              "src/assets/css/navigation.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/style.css",
+              "src/assets/css/color-blue.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-2.2.4.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/mixitup.min.js",
+              "src/assets/js/select2.min.js",
+              "src/assets/js/jquery.colorbox-min.js",
+              "src/assets/js/slick.min.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/revolution/jquery.themepunch.revolution.min.js",
+              "src/assets/js/revolution/jquery.themepunch.tools.min.js",
+              "src/assets/js/revolution/extensions/revolution.extension.actions.min.js",
+              "src/assets/js/revolution/extensions/revolution.extension.layeranimation.min.js",
+              "src/assets/js/revolution/extensions/revolution.extension.navigation.min.js",
+              "src/assets/js/revolution/extensions/revolution.extension.slideanims.min.js",
+              "src/assets/js/revolution-active.js",
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,7 +99,8 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [],
             "assets": [

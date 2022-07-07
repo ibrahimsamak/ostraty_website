@@ -1,0 +1,36 @@
+<div class="slider-area">
+
+<app-other-menu></app-other-menu>
+    
+<div class="banner-area all-text-white text-center" style="padding-top: 120px;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <h1 class="page-title">{{type}}</h1>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="row row-eq-rs-height">
+  <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let item of news">
+      <div class="blog-post wow fadeInUpSmd" data-wow-duration="1.5s" data-wow-delay=".2s">
+          <div class="blog-post__thumbnail-wrap" style="height: 300px;">
+              <img src="{{item?.image}}" alt="blog">
+              <div class="blog-post__like-comment">
+                  <span>{{item?.title}}</span>
+              </div>
+          </div>
+          <div class="blog-post__text-content" >
+              <div class="blog-post__meta-info">
+                  <span class="small-text"><i class="fa fa-user base-color"></i>الادارة</span>
+                  <span class="small-text"><i class="fa fa-calendar base-color"></i>{{item?.createAt | date:'dd-MM-yyyy'}}</span>
+              </div>
+              <p style="height: 55px;overflow: hidden;">
+                  {{item?.details}}
+              </p>
+              <a routerLink="/news-details/{{item?._id}}" class="btn">اقرأء المزيد</a>
+          </div>
+      </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,95 @@
+<div class="slider-area">
+  <app-other-menu></app-other-menu> 
+  <div class="banner-area all-text-white text-center" style="padding-top: 120px;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <h1 class="page-title">ملفي الشخصي</h1>
+              <ul class="fund-breadcumb">
+                  <li><a routerLink="/home">الرئيسية</a> </li>
+                  <li><a routerLink="profile-user">طلب خدمة</a> </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  </div>
+  <div class="main-content section-padding">
+    <div class="container">
+        <h4 class="donate-page-title text-uppercase">المعلومات العامة</h4>
+        <form #form="ngForm" class="contact-form">
+
+
+             <div class="row pdb20">
+                <div class="col-md-2 pdb25">
+                    <span>الخدمة</span>
+                </div>
+                <div class="col-md-4" style="padding-top:18px">
+                  <div class="input-group">
+                        <select id="payment_for" name="payment_for" #payment_for="ngModel" [(ngModel)]="userDetails.payment_for" 
+                        class="form-control input-group__select">
+                            <option *ngFor="let item of services" value="{{item._id}}">{{item.name}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-2 pdt25">
+                  <span>المبلغ المطلوب <span class="red-color">*</span> </span>
+              </div>
+              <div class="col-md-4">
+                  <div class="input-group mt15 input-group--border-radius">
+                      <input required id="payment_for_no" name="payment_for_no" #payment_for_no="ngModel" [(ngModel)]="userDetails.payment_for_no" type="number" placeholder="" class="form-control input-group__input"/>
+                  </div>
+              </div>
+
+            </div> 
+             <div class="row pdb20">
+                <div class="col-md-2 pdb10">
+                    <span>ملاحظات </span>
+                </div>
+                <div class="col-md-10">
+                    <div class="input-group">
+                        <textarea id="notes" name="notes" #notes="ngModel" [(ngModel)]="userDetails.notes" class="form-control input-group__textarea" placeholder=""></textarea>
+                    </div>
+                </div>
+            </div> 
+
+            <h4 class="donate-page-title text-uppercase">وثائق الخدمة</h4>
+            <div class="col-md-2 pdt25">
+                <span>الوثيقة الأولى<span class="red-color">*</span> </span>
+            </div>
+            <div class="col-md-4"  >
+                <div class="input-group mt15 input-group--border-radius">
+                    <input required id="other_file1" name="other_file1" #other_file1 type="file" placeholder="" class="form-control input-group__input"  accept="image/*" (change)="processImage($event)" />
+                </div>
+            </div>
+
+            <div class="col-md-2 pdt25"  >
+                <span>الوثيقة الثانية<span class="red-color"></span> </span>
+            </div>
+            <div class="col-md-4"   >
+                <div class="input-group mt15 input-group--border-radius">
+                    <input  id="other_file2" name="other_file2" #other_file2 type="file" placeholder="" class="form-control input-group__input"  accept="image/*" (change)="processImage2($event)" />
+                </div>
+            </div>
+
+            <div class="col-md-2 pdt25"  >
+              <span>الوثيقة الثالثة<span class="red-color"></span> </span>
+          </div>
+          <div class="col-md-4"   >
+              <div class="input-group mt15 input-group--border-radius">
+                  <input  id="other_file3" name="other_file3" #other_file3 type="file" placeholder="" class="form-control input-group__input"  accept="image/*" (change)="processImage3($event)" />
+              </div>
+          </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <input [disabled]="form.invalid" (click)="SendAction();" class="btn" value="حفظ المعلومات ">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  </div>
+</div>
